@@ -296,7 +296,9 @@
         % \includegraphics[width=0.08\textwidth]{images/UCD_Logo.pdf} \hspace{6cm}
         % \includegraphics[width=0.12\textwidth]{images/BJUT_Logo.pdf} \par
         % \vspace{0.3cm}
-        {\normalsize \textsc{\institutionname}} \par
+        \ifdefined\institutionname
+            {\normalsize \textsc{\institutionname}} \par
+        \fi
         \vspace{0.3cm}
         \vspace{0.2cm}
         {\Large \textbf{\uppercase{\coursecode \ \reporttitle}}} \par

@@ -42,7 +42,9 @@
 \RequirePackage{enumitem}
 \RequirePackage{suffix}
 
-
+% Set padding for enumitem
+\setlist[enumerate]{topsep=-0.8em, itemsep=0em}
+\setlist[itemize]{topsep=-0.8em, itemsep=0em}
 
 % Set font for texttt
 \renewcommand{\ttdefault}{lmtt}
@@ -169,7 +171,7 @@
 
 
 \declaretheoremstyle[name=Theorem]{thmsty}
-\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\declaretheorem[style=thmsty]{theorem}
 \tcolorboxenvironment{theorem}{colframe=UCDGreen}
 
 \declaretheoremstyle[name=Proposition]{prosty}
@@ -292,7 +294,7 @@
     \thispagestyle{plain}
 
     % Create a centered header with institution name and other report info
-    \begin{center}
+    \begin{flushleft}
         \ifdefined\institutionname
             {\normalsize \textsc{\institutionname}} \par
         \fi
@@ -300,8 +302,8 @@
         \vspace{0.2cm}
         {\Large \textbf{\uppercase{\coursecode \ \reporttitle}}} \par
         \vspace{0.2cm}
-        {\large \textbf{\projecttitle}} \par
-        \vspace{0.3cm}
+        {\large \textit{\projecttitle}} \par
+        \vspace{0.25cm}
 
         % Authors section
         \countnames
@@ -318,8 +320,7 @@
         \endgroup
         \par
         \vspace{0.1cm}
-        \textbf{Date:} \today
-        \vspace{0.3cm}
-    \end{center}
+        \textbf{Date:} \paperdate
+    \end{flushleft}
     \endgroup
 }

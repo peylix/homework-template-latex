@@ -236,17 +236,15 @@
 \newcommand{\formatquestion}[1]{%
     % Optional new page
     \ifthenelse{\equal{\questionnewpageflag}{1}}{\newpage}{}%
-
     % Increment counter and reset parts
     \stepcounter{questionCounter}%
     \setcounter{partCounter}{0}%
-
     % Format question header
-    \par\vspace{.2in}%
+    \par\vspace{0.2in}%
         \noindent{\large \textbf{\getquestionlabel{\arabic{questionCounter}}}~\textit{#1}}\par
-    \vspace{0.3em}%
-    \hrule
-    \vspace{.1in}%
+    \vspace{-1.8em}%
+    \noindent\rule{3in}{0.4pt}\\
+    \vspace{0.08in}%
 }
 
 % Generate question label

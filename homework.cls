@@ -291,11 +291,8 @@
 
     \thispagestyle{plain}
 
-    % Create a centered header with logos, college name, and course info
+    % Create a centered header with institution name and other report info
     \begin{center}
-        % \includegraphics[width=0.08\textwidth]{images/UCD_Logo.pdf} \hspace{6cm}
-        % \includegraphics[width=0.12\textwidth]{images/BJUT_Logo.pdf} \par
-        % \vspace{0.3cm}
         \ifdefined\institutionname
             {\normalsize \textsc{\institutionname}} \par
         \fi

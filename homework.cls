@@ -258,16 +258,6 @@
     \fi%
 }
 
-% Question parts environment
-\newenvironment{questionparts}[1][alph]{%
-    \ifthenelse{\equal{#1}{arabic}}{%
-        \begin{enumerate}[label=\textbf{(\arabic{questionCounter}.\arabic{partCounter})}]%
-    }{%
-        \begin{enumerate}[label=\textbf{(\csname #1\endcsname{partCounter})}]%
-    }%
-}{\end{enumerate}}
-
-\newcommand{\qpart}{\stepcounter{partCounter}\item}
 
 % Configuration commands
 \newcommand{\enablenewpage}{\renewcommand{\questionnewpageflag}{1}}

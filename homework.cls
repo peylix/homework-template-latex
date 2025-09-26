@@ -69,7 +69,11 @@
 \addtolength\headwidth{2\FHoffset}
 \fancyhead[L]{\authorname}
 \fancyhead[C]{\coursecode}
-\fancyhead[R]{\paperdate}
+\fancyhead[R]{
+    \ifdefined\paperdate
+        \paperdate
+    \fi
+}
 
 % Paragraph and line spacing configuration
 \setlength{\parskip}{1em}
@@ -321,7 +325,9 @@
         \endgroup
         \par
         \vspace{0.1cm}
-        \textbf{Date:} \paperdate
+        \ifdefined\paperdate
+            \textbf{Date:} \paperdate
+        \fi
     \end{flushleft}
     \endgroup
 }

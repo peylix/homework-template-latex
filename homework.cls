@@ -218,7 +218,8 @@
 \lstset{style=elegantstyle}
 
 
-% ----- \question -----------------------------------------
+% \question command
+% ------------------------------------------
 % Question counters
 \newcounter{questionCounter}
 \newcounter{partCounter}[questionCounter]
@@ -270,7 +271,7 @@
 \newcommand{\setwrittensection}[1]{\renewcommand{\writtensection}{#1}}
 \newcommand{\resetquestions}{\setcounter{questionCounter}{0}}
 
-% ————————————————————————————————————————————————————
+% ------------------------------------------
 
 % Calculate the number of authors
 \newcounter{totalnames}

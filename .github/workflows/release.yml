@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*.*.*'  # trigger when pushing tags starting with `v`
   workflow_dispatch:  # allow trigger manually
+    version:
+      description: 'Release version (e.g., v1.0.0)'
+      required: true
+      type: string
 
 permissions:
   contents: write
@@ -39,7 +43,7 @@ jobs:
         id: get_version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "version=manual-$(date +%Y%m%d-%H%M%S)" >> $GITHUB_OUTPUT
+            echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
           else
             echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
           fi
@@ -62,6 +66,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: ${{ steps.get_version.outputs.version }}
+          name: Release ${{ steps.get_version.outputs.version }}
           files: |
             latex-template-release.zip
             latex-template-release.tar.gz

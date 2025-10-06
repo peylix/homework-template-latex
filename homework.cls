@@ -317,12 +317,9 @@
         % Print all author names inline with commas between
         \begingroup
         \newcounter{namecount}
-        \setcounter{namecount}{0}
-        \foreach \name in \namelist {
-            \stepcounter{namecount}
-            \name
-            \ifthenelse{\value{namecount} < \value{totalnames}}{, }{}
-        }
+        \ifthenelse{\value{totalnames} > 1}
+            {\textbf{Authors:}}
+            {\textbf{Author:}}~\foreach \name in \namelist {\stepcounter{namecount}\name\ifthenelse{\value{namecount} < \value{totalnames}}{, }{}}
         \endgroup
         \par
         \vspace{0.1cm}

@@ -3,7 +3,7 @@ name: Release Template
 on:
   push:
     tags:
-      - 'v*.*.*'  # trigger when pushing tags starting with `v`
+      - 'v*.*'  # trigger when pushing tags starting with `v`
   workflow_dispatch:  # allow trigger manually
 
 jobs:

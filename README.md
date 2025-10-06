@@ -13,9 +13,7 @@ A simple but elegant LaTeX template for writing your homework. Adapted from [thi
 
 ## Suggestions
 
-1. `main.tex` provides the overall structure for this document. You can modify `\input{src/example}` to include your own content files.
-
-2. To edit the document on Overleaf, first download the project as a `.zip` file. Then, in Overleaf, select **New Project > Upload Project** and simply drag and drop the `.zip` file into the popup window.
-
-3. There are plenty of options in the template code that are easy to enable or disable. The source code for the `.cls` file is simple and well-structured and you can easily customize the template to suit your needs.
-
+1. **Structure:** `main.tex` provides the document structure. By default, content is loaded from `src/questions.tex` via `\input{src/questions}`. You can modify this to include any file you need.
+2. **Using this template:** Download **latex-template-release.zip** from the *Releases* page.
+  - In Overleaf, go to **New Project > Upload Project** and drag the `.zip` file into the upload window.
+3. **Customization:** The template includes configurable options that are easy to toggle. The `.cls` file features clean, well-structured code that you can customize to fit your specific requirements.

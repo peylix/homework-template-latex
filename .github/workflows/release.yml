@@ -6,6 +6,9 @@ on:
       - 'v*.*.*'  # trigger when pushing tags starting with `v`
   workflow_dispatch:  # allow trigger manually
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest

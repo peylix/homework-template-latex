@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{homework}[homework template for various courses]
 \LoadClassWithOptions{article}
-\ProvidesPackage{homework}[homework template for various courses]
 
 % Packages for text and input
 \RequirePackage[utf8]{inputenc}

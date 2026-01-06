@@ -30,7 +30,6 @@ jobs:
           cp -r src release-temp/
           cp homework.cls release-temp/
           cp LICENSE release-temp/
-          cp main.pdf release-temp/
           cp main.tex release-temp/
 
           # create zips

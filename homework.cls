@@ -20,6 +20,7 @@
 \RequirePackage{multirow}
 \RequirePackage[caption=false,font=footnotesize]{subfig}
 \RequirePackage{tikz}
+\RequirePackage{caption}
 
 % Packages for page layout and hyperlinks
 \RequirePackage{geometry}
@@ -49,6 +50,12 @@
 
 % Set font for texttt
 \renewcommand{\ttdefault}{lmtt}
+
+% Configure caption settings for figures and tables
+\captionsetup{
+  justification=raggedright,
+  singlelinecheck=false
+}
 
 
 % Page layout configuration

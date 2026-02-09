@@ -34,9 +34,9 @@ jobs:
 
           # create zips
           cd release-temp
-          zip -r ../latex-template-release.zip .
+          zip -r ../homework-template-release.zip .
           cd ..
-          tar -czf latex-template-release.tar.gz -C release-temp .
+          tar -czf homework-template-release.tar.gz -C release-temp .
 
       - name: Extract version from tag
         id: get_version
@@ -54,7 +54,7 @@ jobs:
           cat > RELEASE_NOTES.md << 'EOF'
           ## 📥 How to use
 
-          1. Download and unzip `latex-template-release.zip` or `latex-template-release.tar.gz`
+          1. Download and unzip `homework-template-release.zip` or `homework-template-release.tar.gz`
           2. Add your content to `main.tex`
           3. Compile the file using PDFLaTeX
 
@@ -68,8 +68,8 @@ jobs:
           tag_name: ${{ steps.get_version.outputs.version }}
           name: Release ${{ steps.get_version.outputs.version }}
           files: |
-            latex-template-release.zip
-            latex-template-release.tar.gz
+            homework-template-release.zip
+            homework-template-release.tar.gz
           body_path: RELEASE_NOTES.md
           draft: false
           prerelease: false
